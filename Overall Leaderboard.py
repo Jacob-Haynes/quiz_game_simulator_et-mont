@@ -4,7 +4,7 @@ import pyspark.sql.functions  as psf
 # COMMAND ----------
 
 #data import
-raw_sdf = spark.read.format("json").load("dbfs:/FileStore/shared_uploads/jacob.haynes@monterosa.co/entain/20kUsers")
+raw_sdf = spark.read.format("json").load("dbfs:/FileStore/shared_uploads/xxxx")
 #explode
 lb_sdf = raw_sdf.select("data", psf.explode("data").alias("leaderboard"))
 lb_sdf = lb_sdf.select('leaderboard.*')
